@@ -1,3 +1,5 @@
+import time
+from contextlib import contextmanager
 from typing import List, Callable, Any
 
 
@@ -14,3 +16,21 @@ def read_input(file: str, line_converter: Callable) -> List[Any]:
     """Reads the input of the file and converts it with the specified converter."""
 
     return list(map(line_converter, read_lines_of_file(file)))
+
+
+@contextmanager
+def time_it(name: str = None):
+    """Context manager to measure how long the execution of a certain code fragment takes.
+    The measured execution time will be printed into the console.
+
+    One may specify a name for the test for better traceability by specifying the name input.
+    """
+
+    start_time = time.time()
+    yield
+    duration = time.time() - start_time
+
+    if name is not None:
+        print(f"Execution of {name} took {duration*1000}ms")
+    else:
+        print(f"Execution took {duration*1000}ms")

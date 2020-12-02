@@ -77,7 +77,7 @@ def validate_password(policy: PasswordPolicy, password: str) -> bool:
 
 
 def solve_day2(day2_data: List[Tuple[PasswordPolicy, str]]) -> int:
-    """Counts the amount of passwords not matching the policy."""
+    """Counts the amount of passwords matching the policy."""
 
     validations = map(lambda case: validate_password(case[0], case[1]), day2_data)
 

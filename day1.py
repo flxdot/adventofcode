@@ -35,20 +35,66 @@ produces 1721 * 299 = 514579, so the correct answer is 514579.
 Of course, your expense report is much larger. Find the two entries that sum to 2020; what
 do you get if you multiply them together?
 """
-
+from itertools import permutations
 from typing import List
 
-from common import read_input
+from common import read_input, time_it
 
 
-def solve_day_one(list_of_numbers: List[int]) -> int:
+def solve_via_brute_force(list_of_numbers: List[int]) -> int:
+    """Tries every combination of numbers, the first that adds up to 2020 will be returned."""
     for a in list_of_numbers:
         for b in list_of_numbers:
             if a + b == 2020:
                 return a * b
 
 
+def solve_via_dict(list_of_numbers: List[int]) -> int:
+    """Puts the values into a dict and then loop over the list only once trying to access
+    the missing number directly. If the missing number is not a key simply continue."""
+    choices = {val: val for val in list_of_numbers}
+
+    for val in list_of_numbers:
+        try:
+            return choices[2020 - val] * val
+        except KeyError:
+            continue
+
+
+def solve_via_itertools_permutations(list_of_numbers: List[int]) -> int:
+    """Uses the itertools to create all permutations."""
+
+    all_permutations = permutations(list_of_numbers, 2)
+
+    for a, b in all_permutations:
+        if a + b == 2020:
+            return a * b
+
+
 if __name__ == "__main__":
+    """
+    Execution of solve_via_brute_force() took 0.78582763671875ms
+    Execution of solve_via_dict() took 0.04887580871582031ms
+    Execution of solve_via_itertools_permutations() took 0.9419918060302734ms
+    Solution: 357504
+    """
+
     day1_input = read_input("./inputs/day1.txt", int)
 
-    print(solve_day_one(day1_input))
+    with time_it("solve_via_brute_force()"):
+        solution_brute_force = solve_via_brute_force(day1_input)
+
+    # this is about 16x faster than the brute for attempt
+    with time_it("solve_via_dict()"):
+        solution_dict = solve_via_dict(day1_input)
+
+    # this is about 1.3x slower than the brute for attempt
+    with time_it("solve_via_itertools_permutations()"):
+        solution_permutation = solve_via_itertools_permutations(day1_input)
+
+    assert solution_dict == solution_brute_force
+    assert solution_permutation == solution_brute_force
+
+    print(f"Solution: {solution_brute_force}")
+
+
