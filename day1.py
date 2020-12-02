@@ -52,6 +52,7 @@ def solve_via_brute_force(list_of_numbers: List[int]) -> int:
 def solve_via_dict(list_of_numbers: List[int]) -> int:
     """Puts the values into a dict and then loop over the list only once trying to access
     the missing number directly. If the missing number is not a key simply continue."""
+
     choices = {val: val for val in list_of_numbers}
 
     for val in list_of_numbers:
@@ -59,6 +60,17 @@ def solve_via_dict(list_of_numbers: List[int]) -> int:
             return choices[2020 - val] * val
         except KeyError:
             continue
+
+
+def solve_via_dict2(list_of_numbers: List[int]) -> int:
+    """Puts the values into a dict and then loop over the list only once trying to access
+    the missing number directly. If the missing number is not a key simply continue."""
+
+    choices = {val: val for val in list_of_numbers}
+
+    for val in list_of_numbers:
+        if 2020 - val in choices:
+            return choices[2020 - val] * val
 
 
 def solve_via_itertools_permutations(list_of_numbers: List[int]) -> int:
@@ -73,9 +85,10 @@ def solve_via_itertools_permutations(list_of_numbers: List[int]) -> int:
 
 if __name__ == "__main__":
     """
-    Execution of solve_via_brute_force() took 0.78582763671875ms
-    Execution of solve_via_dict() took 0.04887580871582031ms
-    Execution of solve_via_itertools_permutations() took 0.9419918060302734ms
+    Execution of solve_via_brute_force() took 0.9019374847412109ms
+    Execution of solve_via_dict() took 0.050067901611328125ms
+    Execution of solve_via_dict2() took 0.03814697265625ms
+    Execution of solve_via_itertools_permutations() took 1.1420249938964844ms
     Solution: 357504
     """
 
@@ -87,6 +100,10 @@ if __name__ == "__main__":
     # this is about 16x faster than the brute for attempt
     with time_it("solve_via_dict()"):
         solution_dict = solve_via_dict(day1_input)
+
+    # this is about 23x faster than the brute for attempt
+    with time_it("solve_via_dict2()"):
+        solution_dict = solve_via_dict2(day1_input)
 
     # this is about 1.3x slower than the brute for attempt
     with time_it("solve_via_itertools_permutations()"):
