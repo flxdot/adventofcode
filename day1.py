@@ -42,8 +42,8 @@ from common import read_input
 
 
 def solve_day_one(list_of_numbers: List[int]) -> int:
-    for a in day1_input:
-        for b in day1_input:
+    for a in list_of_numbers:
+        for b in list_of_numbers:
             if a + b == 2020:
                 return a * b
 
