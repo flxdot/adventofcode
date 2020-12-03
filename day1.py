@@ -49,6 +49,19 @@ def solve_via_brute_force(list_of_numbers: List[int]) -> int:
                 return a * b
 
 
+def solve_via_early_break_loops(list_of_numbers: List[int]) -> int:
+    """Tries every combination of numbers, the first that adds up to 2020 will be returned."""
+
+    sorted_list_of_numbers = sorted(list_of_numbers)
+
+    for a in sorted_list_of_numbers:
+        for b in sorted_list_of_numbers:
+            if a + b == 2020:
+                return a * b
+            elif a + b > 2020:
+                break
+
+
 def solve_via_dict(list_of_numbers: List[int]) -> int:
     """Puts the values into a dict and then loop over the list only once trying to access
     the missing number directly. If the missing number is not a key simply continue."""
@@ -85,11 +98,15 @@ def solve_via_itertools_permutations(list_of_numbers: List[int]) -> int:
 
 if __name__ == "__main__":
     """
-    Execution of solve_via_brute_force() took 0.9019374847412109ms
-    Execution of solve_via_dict() took 0.050067901611328125ms
-    Execution of solve_via_dict2() took 0.03814697265625ms
-    Execution of solve_via_itertools_permutations() took 1.1420249938964844ms
+    Execution of solve_via_brute_force() took 0.8051395416259766ms
+    Execution of solve_via_early_break_loops() took 0.10609626770019531ms
+    Execution of solve_via_dict() took 0.051975250244140625ms
+    Execution of solve_via_dict2() took 0.0247955322265625ms
+    Execution of solve_via_itertools_permutations() took 1.0230541229248047ms
     Solution: 357504
+    
+    Note that some results are quite sensitive to the order of the list. Nevertheless solve_via_dict2()
+    is the fasted solution i could find for any random order of the input list.
     """
 
     day1_input = read_input("./inputs/day1.txt", int)
@@ -97,19 +114,25 @@ if __name__ == "__main__":
     with time_it("solve_via_brute_force()"):
         solution_brute_force = solve_via_brute_force(day1_input)
 
+    # this is about 8x times faster than brute force
+    with time_it("solve_via_early_break_loops()"):
+        solution_early_break_loops = solve_via_early_break_loops(day1_input)
+
     # this is about 16x faster than the brute for attempt
     with time_it("solve_via_dict()"):
         solution_dict = solve_via_dict(day1_input)
 
     # this is about 23x faster than the brute for attempt
     with time_it("solve_via_dict2()"):
-        solution_dict = solve_via_dict2(day1_input)
+        solution_dict2 = solve_via_dict2(day1_input)
 
     # this is about 1.3x slower than the brute for attempt
     with time_it("solve_via_itertools_permutations()"):
         solution_permutation = solve_via_itertools_permutations(day1_input)
 
+    assert solution_early_break_loops == solution_brute_force
     assert solution_dict == solution_brute_force
+    assert solution_dict2 == solution_brute_force
     assert solution_permutation == solution_brute_force
 
     print(f"Solution: {solution_brute_force}")
