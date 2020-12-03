@@ -49,6 +49,15 @@ def solve_via_brute_force(list_of_numbers: List[int]) -> int:
                 return a * b
 
 
+def solve_via_brute_force2(list_of_numbers: List[int]) -> int:
+    """Tries every combination of numbers, the first that adds up to 2020 will be returned."""
+    for a in list_of_numbers:
+        for b in list_of_numbers:
+            for c in list_of_numbers:
+                if a + b + c == 2020:
+                    return a * b * c
+
+
 def solve_via_early_break_loops(list_of_numbers: List[int]) -> int:
     """Tries every combination of numbers, the first that adds up to 2020 will be returned."""
 
@@ -104,7 +113,7 @@ if __name__ == "__main__":
     Execution of solve_via_dict2() took 0.0247955322265625ms
     Execution of solve_via_itertools_permutations() took 1.0230541229248047ms
     Solution: 357504
-    
+
     Note that some results are quite sensitive to the order of the list. Nevertheless solve_via_dict2()
     is the fasted solution i could find for any random order of the input list.
     """
@@ -135,6 +144,5 @@ if __name__ == "__main__":
     assert solution_dict2 == solution_brute_force
     assert solution_permutation == solution_brute_force
 
-    print(f"Solution: {solution_brute_force}")
-
-
+    print(f"Solution Part1: {solution_brute_force}")
+    print(f"Solution Part2: {solve_via_brute_force2(day1_input)}")

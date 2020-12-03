@@ -29,10 +29,31 @@ no instances of b, but needs at least 1. The first and third passwords are valid
 contain one a or nine c, both within the limits of their respective policies.
 
 How many passwords are valid according to their policies?
+
+--- Part Two ---
+
+While it appears you validated the passwords correctly, they don't seem to be what the
+Official Toboggan Corporate Authentication System is expecting.
+
+The shopkeeper suddenly realizes that he just accidentally explained the password policy
+rules from his old job at the sled rental place down the street! The Official Toboggan
+Corporate Policy actually works a little differently.
+
+Each policy actually describes two positions in the password, where 1 means the first
+character, 2 means the second character, and so on. (Be careful; Toboggan Corporate Policies
+have no concept of "index zero"!) Exactly one of these positions must contain the given letter.
+Other occurrences of the letter are irrelevant for the purposes of policy enforcement.
+
+Given the same example list from above:
+
+1-3 a: abcde is valid: position 1 contains a and position 3 does not.
+1-3 b: cdefg is invalid: neither position 1 nor position 3 contains b.
+2-9 c: ccccccccc is invalid: both position 2 and position 9 contain c.
+How many passwords are valid according to the new interpretation of the policies?
 """
 
 from dataclasses import dataclass
-from typing import Tuple, List
+from typing import Tuple, List, Callable
 
 from common import read_input
 
@@ -76,10 +97,21 @@ def validate_password(policy: PasswordPolicy, password: str) -> bool:
     return policy.min_occurrence <= letter_occurrences <= policy.max_occurrence
 
 
-def solve_day2(day2_data: List[Tuple[PasswordPolicy, str]]) -> int:
+def validate_password2(policy: PasswordPolicy, password: str) -> bool:
+    """Validates the password with the policy."""
+
+    return (
+        password[policy.min_occurrence - 1] == policy.letter
+        or password[policy.max_occurrence - 1] == policy.letter
+    ) and password[policy.min_occurrence - 1] != password[policy.max_occurrence - 1]
+
+
+def solve_day2_part1(
+    day2_data: List[Tuple[PasswordPolicy, str]], validation_fcn: Callable
+) -> int:
     """Counts the amount of passwords matching the policy."""
 
-    validations = map(lambda case: validate_password(case[0], case[1]), day2_data)
+    validations = map(lambda case: validation_fcn(case[0], case[1]), day2_data)
 
     return sum(validations)
 
@@ -87,4 +119,11 @@ def solve_day2(day2_data: List[Tuple[PasswordPolicy, str]]) -> int:
 if __name__ == "__main__":
     converted_inputs = read_input("./inputs/day2.txt", convert_line_of_input)
 
-    print(f"Solution of day2 is '{solve_day2(converted_inputs)}'")
+    print(
+        f"Solution of Day 2 - Part 1 is "
+        f"'{solve_day2_part1(converted_inputs, validate_password)}'"
+    )
+    print(
+        f"Solution of Day 2 - Part 2 is "
+        f"'{solve_day2_part1(converted_inputs, validate_password2)}'"
+    )
