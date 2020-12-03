@@ -102,6 +102,17 @@ def solve_via_dict3(list_of_numbers: List[int]) -> int:
     choices = {val: val for val in list_of_numbers}
 
     for val in list_of_numbers:
+        a = choices.get(2020 - val)
+        if a:
+            return a * val
+
+def solve_via_dict3_walrus(list_of_numbers: List[int]) -> int:
+    """Puts the values into a dict and then loop over the list only once trying to access
+    the missing number directly. If the missing number is not a key simply continue."""
+
+    choices = {val: val for val in list_of_numbers}
+
+    for val in list_of_numbers:
         if a := choices.get(2020 - val):
             return a * val
 
@@ -118,12 +129,13 @@ def solve_via_itertools_permutations(list_of_numbers: List[int]) -> int:
 
 if __name__ == "__main__":
     """
-    Execution of solve_via_brute_force() took 0.9660720825195312ms
-    Execution of solve_via_early_break_loops() took 0.11515617370605469ms
-    Execution of solve_via_dict() took 0.06008148193359375ms
-    Execution of solve_via_dict2() took 0.026941299438476562ms
-    Execution of solve_via_dict3() took 0.05316734313964844ms
-    Execution of solve_via_itertools_permutations() took 1.3391971588134766ms
+    Execution of solve_via_brute_force() took 0.7853507995605469ms
+    Execution of solve_via_early_break_loops() took 0.10275840759277344ms
+    Execution of solve_via_dict() took 0.051021575927734375ms
+    Execution of solve_via_dict2() took 0.024080276489257812ms
+    Execution of solve_via_dict3() took 0.029087066650390625ms
+    Execution of solve_via_dict3_walrus() took 0.025987625122070312ms
+    Execution of solve_via_itertools_permutations() took 1.035928726196289ms
 
     Note that some results are quite sensitive to the order of the list. Nevertheless solve_via_dict2()
     is the fasted solution i could find for any random order of the input list.
@@ -150,6 +162,10 @@ if __name__ == "__main__":
     with time_it("solve_via_dict3()"):
         solution_dict3 = solve_via_dict3(day1_input)
 
+    # this is about 23x faster than the brute for attempt
+    with time_it("solve_via_dict3_walrus()"):
+        solution_dict3_walrus = solve_via_dict3_walrus(day1_input)
+
     # this is about 1.3x slower than the brute for attempt
     with time_it("solve_via_itertools_permutations()"):
         solution_permutation = solve_via_itertools_permutations(day1_input)
@@ -157,6 +173,8 @@ if __name__ == "__main__":
     assert solution_early_break_loops == solution_brute_force
     assert solution_dict == solution_brute_force
     assert solution_dict2 == solution_brute_force
+    assert solution_dict3 == solution_brute_force
+    assert solution_dict3_walrus == solution_brute_force
     assert solution_permutation == solution_brute_force
 
     print(f"Solution Part1: {solution_brute_force}")
