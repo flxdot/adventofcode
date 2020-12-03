@@ -9,6 +9,7 @@ Here are the links to the individual implementations of each day:
 
 * [Day 1](day1.py)
 * [Day 2](day2.py)
+* [Day 3](day3.py)
 
 ## Notes
 
