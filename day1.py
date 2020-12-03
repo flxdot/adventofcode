@@ -112,7 +112,6 @@ if __name__ == "__main__":
     Execution of solve_via_dict() took 0.051975250244140625ms
     Execution of solve_via_dict2() took 0.0247955322265625ms
     Execution of solve_via_itertools_permutations() took 1.0230541229248047ms
-    Solution: 357504
 
     Note that some results are quite sensitive to the order of the list. Nevertheless solve_via_dict2()
     is the fasted solution i could find for any random order of the input list.
