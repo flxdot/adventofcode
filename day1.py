@@ -106,6 +106,7 @@ def solve_via_dict3(list_of_numbers: List[int]) -> int:
         if a:
             return a * val
 
+
 def solve_via_dict3_walrus(list_of_numbers: List[int]) -> int:
     """Puts the values into a dict and then loop over the list only once trying to access
     the missing number directly. If the missing number is not a key simply continue."""

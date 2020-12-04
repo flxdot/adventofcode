@@ -60,27 +60,114 @@ According to the above rules, your improved system would report 2 valid passport
 Count the number of valid passports - those that have all required fields. Treat cid as
 optional. In your batch file, how many passports are valid?
 """
-from dataclasses import dataclass
-from typing import List
+import re
+from dataclasses import dataclass, fields, field
+from typing import List, Union, Any
 
 from common import read_input
 
 
+class ValidationError(Exception):
+    pass
+
+
+def value_in_range(
+    value: Union[str, int, float], min: Union[int, float], max: Union[int, float]
+) -> bool:
+    return value is not None and min <= float(value) <= max
+
+
+def validate_height(height_str: str) -> bool:
+    if height_str is None:
+        return False
+    if height_str.endswith("cm"):
+        return value_in_range(float(height_str.replace("cm", "")), 150, 193)
+    elif height_str.endswith("in"):
+        return value_in_range(float(height_str.replace("in", "")), 59, 76)
+    return False
+
+
+def validate_web_color(color_str: str) -> bool:
+    if color_str is None:
+        return False
+
+    return re.compile("#[0-9a-f]{6}").match(color_str) is not None
+
+
+def is_one_of(choice: Any, choices: List[Any]) -> bool:
+    if choice is None:
+        return False
+    return choice in choices
+
+
 @dataclass
 class Passport:
-    byr: str
-    iyr: str
-    eyr: str
-    hgt: str
-    hcl: str
-    ecl: str
-    pid: str
-    cid: str = None
+    byr: str = field(
+        default=None,
+        metadata={
+            "validator": value_in_range,
+            "validator_kwargs": {"min": 1920, "max": 2002},
+        },
+    )
+    iyr: str = field(
+        default=None,
+        metadata={
+            "validator": value_in_range,
+            "validator_kwargs": {"min": 2010, "max": 2020},
+        },
+    )
+    eyr: str = field(
+        default=None,
+        metadata={
+            "validator": value_in_range,
+            "validator_kwargs": {"min": 2020, "max": 2030},
+        },
+    )
+    hgt: str = field(
+        default=None,
+        metadata={"validator": validate_height},
+    )
+    hcl: str = field(
+        default=None,
+        metadata={"validator": validate_web_color},
+    )
+    ecl: str = field(
+        default=None,
+        metadata={
+            "validator": is_one_of,
+            "validator_kwargs": {
+                "choices": ["amb", "blu", "brn", "gry", "grn", "hzl", "oth"]
+            },
+        },
+    )
+    pid: str = field(
+        default=None,
+        metadata={
+            "validator": lambda value: value is not None and len(value) == 9,
+        },
+    )
+    cid: str = field(
+        default=None,
+        metadata={
+            "validator": lambda value: True,
+        },
+    )
 
     @property
     def is_valid(self):
         fields_to_validate = ["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"]
         return all([getattr(self, field) is not None for field in fields_to_validate])
+
+    @property
+    def is_type_valid(self):
+        for field in fields(self):
+            field_value = getattr(self, field.name)
+            if "validator" in field.metadata:
+                validator = field.metadata["validator"]
+                validator_params = field.metadata.get("validator_kwargs", {})
+                if not validator(field_value, **validator_params):
+                    return False
+        return True
 
 
 def extract_passports(raw_data: List[str]) -> List[Passport]:
@@ -94,10 +181,7 @@ def extract_passports(raw_data: List[str]) -> List[Passport]:
         for attrib_str in data_set.split():
             key, value = attrib_str.split(":")
             kwargs[key] = value
-        try:
-            passports.append(Passport(**kwargs))
-        except TypeError:
-            continue
+        passports.append(Passport(**kwargs))
 
     return passports
 
@@ -120,14 +204,19 @@ def combine_consecutive_lines(raw_data: List[str]) -> List[str]:
 
 
 def solve_day4(raw_data: List[str]):
-
     passports = extract_passports(raw_data)
 
-    return len(passports)
+    return sum([passport.is_valid for passport in passports])
+
+
+def solve_day4_part2(raw_data: List[str]):
+    passports = extract_passports(raw_data)
+
+    return sum([passport.is_type_valid for passport in passports])
 
 
 if __name__ == "__main__":
-
-    raw_data = read_input('./inputs/day4.txt', str)
+    raw_data = read_input("./inputs/day4.txt", str)
 
     print(solve_day4(raw_data))
+    print(solve_day4_part2(raw_data))
