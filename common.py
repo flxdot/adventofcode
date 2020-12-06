@@ -18,6 +18,19 @@ def read_input(file: str, line_converter: Callable) -> List[Any]:
     return list(map(line_converter, read_lines_of_file(file)))
 
 
+def read_input_groups(file: str, line_converter: Callable) -> List[List[Any]]:
+    """Reads the input of the file and converts each line with the specified converter.
+    Additionally the lines will be grouped by empty lines."""
+
+    groups = [[]]
+    for line in read_input(file, str):
+        if not line.strip():
+            groups.append([])
+            continue
+        groups[-1].append(line_converter(line))
+
+    return groups
+
 @contextmanager
 def time_it(name: str = None):
     """Context manager to measure how long the execution of a certain code fragment takes.

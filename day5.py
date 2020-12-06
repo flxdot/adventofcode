@@ -109,3 +109,4 @@ if __name__ == "__main__":
     for seat, next_seat in zip(sorted_seat_ids[:-1], sorted_seat_ids[1:]):
         if next_seat - seat == 2:
             print(seat + 1)
+            break
