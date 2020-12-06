@@ -89,7 +89,7 @@ def convert_line_of_input(line: str) -> Tuple[PasswordPolicy, str]:
     return PasswordPolicy.from_string(policy_string), password.strip()
 
 
-def validate_password(policy: PasswordPolicy, password: str) -> bool:
+def validate_password_part1(policy: PasswordPolicy, password: str) -> bool:
     """Validates the password with the policy."""
 
     letter_occurrences = sum([letter == policy.letter for letter in password])
@@ -97,7 +97,7 @@ def validate_password(policy: PasswordPolicy, password: str) -> bool:
     return policy.min_occurrence <= letter_occurrences <= policy.max_occurrence
 
 
-def validate_password2(policy: PasswordPolicy, password: str) -> bool:
+def validate_password_part2(policy: PasswordPolicy, password: str) -> bool:
     """Validates the password with the policy."""
 
     return (
@@ -106,7 +106,7 @@ def validate_password2(policy: PasswordPolicy, password: str) -> bool:
     ) and password[policy.min_occurrence - 1] != password[policy.max_occurrence - 1]
 
 
-def solve_day2_part1(
+def solve_day2(
     day2_data: List[Tuple[PasswordPolicy, str]], validation_fcn: Callable
 ) -> int:
     """Counts the amount of passwords matching the policy."""
@@ -121,9 +121,9 @@ if __name__ == "__main__":
 
     print(
         f"Solution of Day 2 - Part 1 is "
-        f"'{solve_day2_part1(converted_inputs, validate_password)}'"
+        f"'{solve_day2(converted_inputs, validate_password_part1)}'"
     )
     print(
         f"Solution of Day 2 - Part 2 is "
-        f"'{solve_day2_part1(converted_inputs, validate_password2)}'"
+        f"'{solve_day2(converted_inputs, validate_password_part2)}'"
     )
