@@ -101,12 +101,12 @@ if __name__ == "__main__":
     seat_ids = [seat.id for seat in seats]
 
     # part one
-    print(max(seat_ids))
+    print(f"Solution of Day 5 - Part 1 is " f"'{max(seat_ids)}'")
 
     # part two
     sorted_seat_ids = sorted(seat_ids)
 
     for seat, next_seat in zip(sorted_seat_ids[:-1], sorted_seat_ids[1:]):
         if next_seat - seat == 2:
-            print(seat + 1)
+            print(f"Solution of Day 5 - Part 2 is " f"'{seat + 1}'")
             break

@@ -190,5 +190,5 @@ if __name__ == "__main__":
     assert solution_dict3_walrus == solution_brute_force
     assert solution_permutation == solution_brute_force
 
-    print(f"Solution Part1: {solution_brute_force}")
-    print(f"Solution Part2: {solve_via_brute_force2(day1_input)}")
+    print(f"Solution of Day 1 - Part 1 is " f"'{solution_brute_force}'")
+    print(f"Solution of Day 1 - Part 2 is " f"'{solve_via_brute_force2(day1_input)}'")

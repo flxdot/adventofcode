@@ -132,8 +132,5 @@ def solve_day6_part2(groups_yes_answers: List[List[str]]) -> int:
 if __name__ == "__main__":
     groups_yes_answers = read_input_groups("./inputs/day6.txt", str)
 
-    # part one
-    print(solve_day6_part1(groups_yes_answers))
-
-    # part two
-    print(solve_day6_part2(groups_yes_answers))
+    print(f"Solution of Day 6 - Part 1 is " f"'{solve_day6_part1(groups_yes_answers)}'")
+    print(f"Solution of Day 6 - Part 2 is " f"'{solve_day6_part2(groups_yes_answers)}'")

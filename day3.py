@@ -124,11 +124,11 @@ if __name__ == "__main__":
     # first entry steps down, second entry steps to the right
     slope = (1, 3)
 
-    print(count_on_slope(input_data, slope))
+    print(f"Solution of Day 3 - Part 1 is " f"'{count_on_slope(input_data, slope)}'")
 
     # part 2
     prod_of_encountered_trees = 1
     for slope in [(1, 1), (1, 3), (1, 5), (1, 7), (2, 1)]:
         prod_of_encountered_trees *= count_on_slope(input_data, slope)
 
-    print(prod_of_encountered_trees)
+    print(f"Solution of Day 3 - Part 2 is " f"'{prod_of_encountered_trees}'")
