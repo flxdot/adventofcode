@@ -42,12 +42,43 @@ shiny gold bag is 4.
 
 How many bag colors can eventually contain at least one shiny gold bag? (The list of rules
 is quite long; make sure you get all of it.)
+
+--- Part Two ---
+
+It's getting pretty expensive to fly these days - not because of ticket prices, but
+because of the ridiculous number of bags you need to buy!
+
+Consider again your shiny gold bag and the rules from the above example:
+
+faded blue bags contain 0 other bags.
+dotted black bags contain 0 other bags.
+vibrant plum bags contain 11 other bags: 5 faded blue bags and 6 dotted black bags.
+dark olive bags contain 7 other bags: 3 faded blue bags and 4 dotted black bags.
+So, a single shiny gold bag must contain 1 dark olive bag (and the 7 bags within it) plus
+2 vibrant plum bags (and the 11 bags within each of those): 1 + 1*7 + 2 + 2*11 = 32 bags!
+
+Of course, the actual rules have a small chance of going several levels deeper than this
+example; be sure to count all of the bags, even if the nesting becomes topologically impractical!
+
+Here's another example:
+
+shiny gold bags contain 2 dark red bags.
+dark red bags contain 2 dark orange bags.
+dark orange bags contain 2 dark yellow bags.
+dark yellow bags contain 2 dark green bags.
+dark green bags contain 2 dark blue bags.
+dark blue bags contain 2 dark violet bags.
+dark violet bags contain no other bags.
+In this example, a single shiny gold bag must contain 126 other bags.
+
+How many individual bags are required inside your single shiny gold bag?
 """
 
-from typing import List, Tuple
+from typing import List, Tuple, Dict
 from common import read_input
 
-bag_registry = {}
+
+bag_registry: Dict[str, "Bag"] = {}
 
 
 class Bag:
@@ -82,13 +113,25 @@ class Bag:
                 return True
         return False
 
+    @property
+    def number_of_containing_bags(self) -> int:
+        """Counts the number of all containing bags."""
+
+        bag_count = 0
+        for sub_bag_count, sub_bag_color in self.containing_bags:
+            bag_count += sub_bag_count
+            bag_count += (
+                sub_bag_count * bag_registry[sub_bag_color].number_of_containing_bags
+            )
+        return bag_count
+
 
 def input_converter(input: str) -> Bag:
 
     # get rid of the trailing dot
     input = input.rstrip(".")
     outer_bag, inner_bags_specifier = input.split("contain")
-    inner_bags_specifier = inner_bags_specifier.split(', ')
+    inner_bags_specifier = inner_bags_specifier.split(", ")
 
     *outer_colors, _ = outer_bag.split()
     outer_color = " ".join(outer_colors)
@@ -108,7 +151,7 @@ def input_converter(input: str) -> Bag:
 
 def solve_day7_part1(converted_input: List[Bag]):
 
-    my_bag = Bag("shiny gold", [])
+    my_bag = bag_registry["shiny gold"]
 
     containing_count = 0
     for bag in bag_registry.values():
@@ -119,12 +162,14 @@ def solve_day7_part1(converted_input: List[Bag]):
 
 
 def solve_day7_part2(converted_input: List[Bag]):
-    pass
+
+    my_bag = bag_registry["shiny gold"]
+
+    return my_bag.number_of_containing_bags
 
 
 if __name__ == "__main__":
     raw_input = read_input("inputs/day7.txt", input_converter)
-    
+
     print(f"Solution of Day 1 - Part 1 is '{solve_day7_part1(raw_input)}'")
     print(f"Solution of Day 1 - Part 2 is '{solve_day7_part2(raw_input)}'")
-
