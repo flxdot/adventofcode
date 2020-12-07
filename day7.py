@@ -126,11 +126,11 @@ class Bag:
         return bag_count
 
 
-def input_converter(input: str) -> Bag:
+def input_converter(input_line: str) -> Bag:
 
     # get rid of the trailing dot
-    input = input.rstrip(".")
-    outer_bag, inner_bags_specifier = input.split("contain")
+    input_line = input_line.rstrip(".")
+    outer_bag, inner_bags_specifier = input_line.split("contain")
     inner_bags_specifier = inner_bags_specifier.split(", ")
 
     *outer_colors, _ = outer_bag.split()

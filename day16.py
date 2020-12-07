@@ -6,15 +6,18 @@ from typing import List
 from common import read_input
 
 
-def input_converter(input: str) -> str:
-    return str(input)
+convert_output = str
 
 
-def solve_day16_part1(raw_input: List[str]):
+def input_converter(input_line: str) -> convert_output:
+    return str(input_line)
+
+
+def solve_day16_part1(converted_input: List[convert_output]):
     pass
 
 
-def solve_day16_part2(raw_input: List[str]):
+def solve_day16_part2(converted_input: List[convert_output]):
     pass
 
 
