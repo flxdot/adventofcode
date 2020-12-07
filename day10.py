@@ -20,7 +20,6 @@ def solve_day10_part2(raw_input: List[str]):
 
 if __name__ == "__main__":
     raw_input = read_input("inputs/day10.txt", input_converter)
-    
+
     print(f"Solution of Day 1 - Part 1 is '{solve_day10_part1(raw_input)}'")
     print(f"Solution of Day 1 - Part 2 is '{solve_day10_part2(raw_input)}'")
-

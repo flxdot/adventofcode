@@ -220,4 +220,3 @@ if __name__ == "__main__":
 
     print(f"Solution of Day 4 - Part 1 is " f"'{solve_day4(raw_data)}'")
     print(f"Solution of Day 4 - Part 2 is " f"'{solve_day4_part2(raw_data)}'")
-
