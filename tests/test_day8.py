@@ -10,7 +10,7 @@ def test_input():
 
 
 def test_solve_day8_part1(test_input):
-    pass
+    assert 5 == solve_day8_part1(test_input)
 
 
 def test_solve_day8_part2(test_input):
