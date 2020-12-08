@@ -112,11 +112,11 @@ from typing import List, Tuple
 from common import read_input
 
 
-convert_output = Tuple[str, int]
+instruction_type = Tuple[str, int]
 
 
 class CommandExecutor:
-    def __init__(self, commands: List[convert_output]):
+    def __init__(self, commands: List[instruction_type]):
 
         self._commands = commands
 
@@ -124,35 +124,33 @@ class CommandExecutor:
         self._lines_visited = []
         self._current_line = 0
 
-        self._did_finish_regular = None
-
     @property
     def accumulator(self):
+        """Current value of the accumulator."""
         return self._accumulator
 
-    @property
-    def did_finish_regular(self):
-        return self._did_finish_regular
-
     def execute(self):
+        """
+        Executes the boot code until either the last line is reached or a line would be
+        visited twice.
+        """
 
         self.reset()
 
-        while (
-            self._current_line not in self._lines_visited
-            and self._current_line < len(self._commands)
-        ):
-            self._execute_line(self._commands[self._current_line])
+        while self._current_line < len(self._commands):
+            self._execute_instruction(self._commands[self._current_line])
 
-        self._did_finish_regular = self._current_line >= len(self._commands)
+            if self._current_line in self._lines_visited:
+                raise RecursionError(f"Trying to executed line {self._current_line} twice.")
 
     def reset(self):
+        """Resets the internal variables."""
         self._accumulator = 0
         self._lines_visited = []
         self._current_line = 0
 
-    def _execute_line(self, command: convert_output):
-
+    def _execute_instruction(self, instruction: instruction_type):
+        """Executes a single instruction."""
         command_to_fcn = {
             "nop": self._no_operation,
             "acc": self._accumulate,
@@ -161,56 +159,73 @@ class CommandExecutor:
 
         self._lines_visited.append(self._current_line)
 
-        command_name, value = command
+        command_name, value = instruction
         command_to_fcn[command_name](value)
 
     def _no_operation(self, value: int):
+        """Executes a 'nop' instruction."""
         self._current_line += 1
 
     def _accumulate(self, value: int):
+        """Executes a 'acc' instruction."""
         self._current_line += 1
         self._accumulator += value
 
     def _jump(self, value: str):
+        """Executes a 'jmp' instruction."""
         self._current_line += value
 
 
-def input_converter(input_line: str) -> convert_output:
+def input_converter(input_line: str) -> instruction_type:
     command, value = input_line.split()
     return command, int(value)
 
 
-def solve_day8_part1(converted_input: List[convert_output]):
+def solve_day8_part1(boot_code: List[instruction_type]):
+    """
+    Executes the boot code until either the last line is reached or a line would be
+    visited twice.
+    """
 
-    command_executor = CommandExecutor(converted_input)
-    command_executor.execute()
-    return command_executor.accumulator
+    command_executor = CommandExecutor(boot_code)
+    try:
+        command_executor.execute()
+    except RecursionError:
+        return command_executor.accumulator
 
 
-def solve_day8_part2(converted_input: List[convert_output]):
+def solve_day8_part2(boot_code: List[instruction_type]):
+    """
+    Creates local variants of the boot code by interchanging exactly one `jmp` and `nop` of
+    each variant and then runs the code to check if it finished to execute the code without
+    recursion.
+    """
 
-    for idx, instruction in enumerate(converted_input):
+    for idx, instruction in enumerate(boot_code):
         command, value = instruction
         if command == "acc":
             continue
 
-        boot_code_variant = converted_input[:]
+        boot_code_variant = boot_code[:]
         boot_code_variant[idx] = (
             "jmp" if command == "nop" else "nop",
             boot_code_variant[idx][1],
         )
 
         command_executor = CommandExecutor(boot_code_variant)
-        command_executor.execute()
+        try:
+            command_executor.execute()
+        except RecursionError:
+            continue
 
-        if command_executor.did_finish_regular:
-            return command_executor.accumulator
+        print(f"Found a bug in instruction No. {idx + 1}")
+        return command_executor.accumulator
 
     raise RuntimeError("No bug fix found!")
 
 
 if __name__ == "__main__":
-    raw_input = read_input("inputs/day8.txt", input_converter)
+    boot_code = read_input("inputs/day8.txt", input_converter)
 
-    print(f"Solution of Day 1 - Part 1 is '{solve_day8_part1(raw_input)}'")
-    print(f"Solution of Day 1 - Part 2 is '{solve_day8_part2(raw_input)}'")
+    print(f"Solution of Day 1 - Part 1 is '{solve_day8_part1(boot_code)}'")
+    print(f"Solution of Day 1 - Part 2 is '{solve_day8_part2(boot_code)}'")
