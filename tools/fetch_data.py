@@ -22,8 +22,9 @@ def get_task_description(year: int, day: int) -> str:
     url = get_task_url(year, day)
     response = requests.get(url, cookies={"session": read_cookie()})
     page = BeautifulSoup(response.text, "html.parser")
-    description = page.find_all("article", class_="day-desc")[0]
-    return html2text.HTML2Text().handle(str(description))
+    descriptions = page.find_all("article", class_="day-desc")
+    md = html2text.HTML2Text()
+    return md.handle("".join([str(description) for description in descriptions]))
 
 
 def get_task_input(year: int, day: int) -> str:
@@ -43,4 +44,4 @@ def read_cookie():
 
 
 if __name__ == "__main__":
-    print(get_task_description(2020, 3))
+    print(get_task_description(2015, 1))
