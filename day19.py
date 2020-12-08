@@ -8,21 +8,21 @@ from common import read_input
 
 convert_output = str
 
-
 def input_converter(input_line: str) -> convert_output:
     return str(input_line)
 
 
 def solve_day19_part1(converted_input: List[convert_output]):
-    pass
+    return 1
 
 
 def solve_day19_part2(converted_input: List[convert_output]):
-    pass
+    return 1
 
 
 if __name__ == "__main__":
     raw_input = read_input("inputs/day19.txt", input_converter)
-
+    
     print(f"Solution of Day 1 - Part 1 is '{solve_day19_part1(raw_input)}'")
     print(f"Solution of Day 1 - Part 2 is '{solve_day19_part2(raw_input)}'")
+
