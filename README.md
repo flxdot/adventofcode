@@ -146,7 +146,7 @@ Here are the links to the individual implementations of each day:
 
 ### 2015
 
-- [ ] [Day 1](year2015/day1/)
+- [x] [Day 1](year2015/day1/)
 - [ ] [Day 2](year2015/day2/)
 - [ ] [Day 3](year2015/day3/)
 - [ ] [Day 4](year2015/day4/)
