@@ -1,8 +1,8 @@
 # Advent of Code 2015 - Day 11
 
-Solution for this day: [year2015day11.py](year2015/day11/year2015day11.py)
+Solution for this day: [year2015day11.py](year2015day11.py)
 
-My input for this day: [input.txt](year2015/day11/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 11: Corporate Policy ---
 

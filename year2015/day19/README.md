@@ -1,8 +1,8 @@
 # Advent of Code 2015 - Day 19
 
-Solution for this day: [year2015day19.py](year2015/day19/year2015day19.py)
+Solution for this day: [year2015day19.py](year2015day19.py)
 
-My input for this day: [input.txt](year2015/day19/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 19: Medicine for Rudolph ---
 

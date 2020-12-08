@@ -1,8 +1,8 @@
 # Advent of Code 2015 - Day 17
 
-Solution for this day: [year2015day17.py](year2015/day17/year2015day17.py)
+Solution for this day: [year2015day17.py](year2015day17.py)
 
-My input for this day: [input.txt](year2015/day17/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 17: No Such Thing as Too Much ---
 

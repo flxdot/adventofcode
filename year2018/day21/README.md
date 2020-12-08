@@ -1,8 +1,8 @@
 # Advent of Code 2018 - Day 21
 
-Solution for this day: [year2018day21.py](year2018/day21/year2018day21.py)
+Solution for this day: [year2018day21.py](year2018day21.py)
 
-My input for this day: [input.txt](year2018/day21/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 21: Chronal Conversion ---
 

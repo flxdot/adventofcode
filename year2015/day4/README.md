@@ -1,8 +1,8 @@
 # Advent of Code 2015 - Day 4
 
-Solution for this day: [year2015day4.py](year2015/day4/year2015day4.py)
+Solution for this day: [year2015day4.py](year2015day4.py)
 
-My input for this day: [input.txt](year2015/day4/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 4: The Ideal Stocking Stuffer ---
 

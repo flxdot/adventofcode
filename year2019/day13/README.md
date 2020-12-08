@@ -1,8 +1,8 @@
 # Advent of Code 2019 - Day 13
 
-Solution for this day: [year2019day13.py](year2019/day13/year2019day13.py)
+Solution for this day: [year2019day13.py](year2019day13.py)
 
-My input for this day: [input.txt](year2019/day13/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 13: Care Package ---
 

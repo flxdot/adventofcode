@@ -1,8 +1,8 @@
 # Advent of Code 2020 - Day 7
 
-Solution for this day: [year2020day7.py](year2020/day7/year2020day7.py)
+Solution for this day: [year2020day7.py](year2020day7.py)
 
-My input for this day: [input.txt](year2020/day7/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 7: Handy Haversacks ---
 

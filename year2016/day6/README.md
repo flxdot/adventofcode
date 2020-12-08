@@ -1,8 +1,8 @@
 # Advent of Code 2016 - Day 6
 
-Solution for this day: [year2016day6.py](year2016/day6/year2016day6.py)
+Solution for this day: [year2016day6.py](year2016day6.py)
 
-My input for this day: [input.txt](year2016/day6/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 6: Signals and Noise ---
 

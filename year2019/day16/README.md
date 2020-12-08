@@ -1,8 +1,8 @@
 # Advent of Code 2019 - Day 16
 
-Solution for this day: [year2019day16.py](year2019/day16/year2019day16.py)
+Solution for this day: [year2019day16.py](year2019day16.py)
 
-My input for this day: [input.txt](year2019/day16/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 16: Flawed Frequency Transmission ---
 

@@ -1,8 +1,8 @@
 # Advent of Code 2017 - Day 13
 
-Solution for this day: [year2017day13.py](year2017/day13/year2017day13.py)
+Solution for this day: [year2017day13.py](year2017day13.py)
 
-My input for this day: [input.txt](year2017/day13/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 13: Packet Scanners ---
 

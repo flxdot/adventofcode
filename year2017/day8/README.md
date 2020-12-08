@@ -1,8 +1,8 @@
 # Advent of Code 2017 - Day 8
 
-Solution for this day: [year2017day8.py](year2017/day8/year2017day8.py)
+Solution for this day: [year2017day8.py](year2017day8.py)
 
-My input for this day: [input.txt](year2017/day8/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 8: I Heard You Like Registers ---
 

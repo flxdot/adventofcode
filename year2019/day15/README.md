@@ -1,8 +1,8 @@
 # Advent of Code 2019 - Day 15
 
-Solution for this day: [year2019day15.py](year2019/day15/year2019day15.py)
+Solution for this day: [year2019day15.py](year2019day15.py)
 
-My input for this day: [input.txt](year2019/day15/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 15: Oxygen System ---
 

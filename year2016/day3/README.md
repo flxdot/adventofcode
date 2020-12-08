@@ -1,8 +1,8 @@
 # Advent of Code 2016 - Day 3
 
-Solution for this day: [year2016day3.py](year2016/day3/year2016day3.py)
+Solution for this day: [year2016day3.py](year2016day3.py)
 
-My input for this day: [input.txt](year2016/day3/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 3: Squares With Three Sides ---
 

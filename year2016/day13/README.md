@@ -1,8 +1,8 @@
 # Advent of Code 2016 - Day 13
 
-Solution for this day: [year2016day13.py](year2016/day13/year2016day13.py)
+Solution for this day: [year2016day13.py](year2016day13.py)
 
-My input for this day: [input.txt](year2016/day13/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 13: A Maze of Twisty Little Cubicles ---
 

@@ -1,8 +1,8 @@
 # Advent of Code 2019 - Day 14
 
-Solution for this day: [year2019day14.py](year2019/day14/year2019day14.py)
+Solution for this day: [year2019day14.py](year2019day14.py)
 
-My input for this day: [input.txt](year2019/day14/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 14: Space Stoichiometry ---
 

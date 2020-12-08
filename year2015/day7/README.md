@@ -1,8 +1,8 @@
 # Advent of Code 2015 - Day 7
 
-Solution for this day: [year2015day7.py](year2015/day7/year2015day7.py)
+Solution for this day: [year2015day7.py](year2015day7.py)
 
-My input for this day: [input.txt](year2015/day7/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 7: Some Assembly Required ---
 

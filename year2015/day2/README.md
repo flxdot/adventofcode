@@ -1,8 +1,8 @@
 # Advent of Code 2015 - Day 2
 
-Solution for this day: [year2015day2.py](year2015/day2/year2015day2.py)
+Solution for this day: [year2015day2.py](year2015day2.py)
 
-My input for this day: [input.txt](year2015/day2/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 2: I Was Told There Would Be No Math ---
 

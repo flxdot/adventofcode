@@ -1,8 +1,8 @@
 # Advent of Code 2017 - Day 9
 
-Solution for this day: [year2017day9.py](year2017/day9/year2017day9.py)
+Solution for this day: [year2017day9.py](year2017day9.py)
 
-My input for this day: [input.txt](year2017/day9/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 9: Stream Processing ---
 

@@ -1,8 +1,8 @@
 # Advent of Code 2018 - Day 22
 
-Solution for this day: [year2018day22.py](year2018/day22/year2018day22.py)
+Solution for this day: [year2018day22.py](year2018day22.py)
 
-My input for this day: [input.txt](year2018/day22/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 22: Mode Maze ---
 

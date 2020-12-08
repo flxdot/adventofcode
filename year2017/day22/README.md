@@ -1,8 +1,8 @@
 # Advent of Code 2017 - Day 22
 
-Solution for this day: [year2017day22.py](year2017/day22/year2017day22.py)
+Solution for this day: [year2017day22.py](year2017day22.py)
 
-My input for this day: [input.txt](year2017/day22/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 22: Sporifica Virus ---
 

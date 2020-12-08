@@ -1,8 +1,8 @@
 # Advent of Code 2015 - Day 16
 
-Solution for this day: [year2015day16.py](year2015/day16/year2015day16.py)
+Solution for this day: [year2015day16.py](year2015day16.py)
 
-My input for this day: [input.txt](year2015/day16/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 16: Aunt Sue ---
 

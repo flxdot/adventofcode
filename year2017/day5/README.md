@@ -1,8 +1,8 @@
 # Advent of Code 2017 - Day 5
 
-Solution for this day: [year2017day5.py](year2017/day5/year2017day5.py)
+Solution for this day: [year2017day5.py](year2017day5.py)
 
-My input for this day: [input.txt](year2017/day5/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 5: A Maze of Twisty Trampolines, All Alike ---
 

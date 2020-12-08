@@ -1,8 +1,8 @@
 # Advent of Code 2018 - Day 13
 
-Solution for this day: [year2018day13.py](year2018/day13/year2018day13.py)
+Solution for this day: [year2018day13.py](year2018day13.py)
 
-My input for this day: [input.txt](year2018/day13/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 13: Mine Cart Madness ---
 

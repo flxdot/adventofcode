@@ -1,8 +1,8 @@
 # Advent of Code 2016 - Day 24
 
-Solution for this day: [year2016day24.py](year2016/day24/year2016day24.py)
+Solution for this day: [year2016day24.py](year2016day24.py)
 
-My input for this day: [input.txt](year2016/day24/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 24: Air Duct Spelunking ---
 

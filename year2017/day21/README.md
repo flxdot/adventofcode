@@ -1,8 +1,8 @@
 # Advent of Code 2017 - Day 21
 
-Solution for this day: [year2017day21.py](year2017/day21/year2017day21.py)
+Solution for this day: [year2017day21.py](year2017day21.py)
 
-My input for this day: [input.txt](year2017/day21/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 21: Fractal Art ---
 

@@ -1,8 +1,8 @@
 # Advent of Code 2017 - Day 12
 
-Solution for this day: [year2017day12.py](year2017/day12/year2017day12.py)
+Solution for this day: [year2017day12.py](year2017day12.py)
 
-My input for this day: [input.txt](year2017/day12/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 12: Digital Plumber ---
 

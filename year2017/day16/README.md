@@ -1,8 +1,8 @@
 # Advent of Code 2017 - Day 16
 
-Solution for this day: [year2017day16.py](year2017/day16/year2017day16.py)
+Solution for this day: [year2017day16.py](year2017day16.py)
 
-My input for this day: [input.txt](year2017/day16/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 16: Permutation Promenade ---
 

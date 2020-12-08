@@ -1,8 +1,8 @@
 # Advent of Code 2019 - Day 20
 
-Solution for this day: [year2019day20.py](year2019/day20/year2019day20.py)
+Solution for this day: [year2019day20.py](year2019day20.py)
 
-My input for this day: [input.txt](year2019/day20/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 20: Donut Maze ---
 

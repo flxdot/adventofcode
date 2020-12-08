@@ -1,8 +1,8 @@
 # Advent of Code 2016 - Day 19
 
-Solution for this day: [year2016day19.py](year2016/day19/year2016day19.py)
+Solution for this day: [year2016day19.py](year2016day19.py)
 
-My input for this day: [input.txt](year2016/day19/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 19: An Elephant Named Joseph ---
 

@@ -1,8 +1,8 @@
 # Advent of Code 2015 - Day 15
 
-Solution for this day: [year2015day15.py](year2015/day15/year2015day15.py)
+Solution for this day: [year2015day15.py](year2015day15.py)
 
-My input for this day: [input.txt](year2015/day15/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 15: Science for Hungry People ---
 

@@ -1,8 +1,8 @@
 # Advent of Code 2015 - Day 18
 
-Solution for this day: [year2015day18.py](year2015/day18/year2015day18.py)
+Solution for this day: [year2015day18.py](year2015day18.py)
 
-My input for this day: [input.txt](year2015/day18/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 18: Like a GIF For Your Yard ---
 

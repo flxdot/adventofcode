@@ -1,8 +1,8 @@
 # Advent of Code 2016 - Day 4
 
-Solution for this day: [year2016day4.py](year2016/day4/year2016day4.py)
+Solution for this day: [year2016day4.py](year2016day4.py)
 
-My input for this day: [input.txt](year2016/day4/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 4: Security Through Obscurity ---
 

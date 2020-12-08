@@ -1,8 +1,8 @@
 # Advent of Code 2019 - Day 7
 
-Solution for this day: [year2019day7.py](year2019/day7/year2019day7.py)
+Solution for this day: [year2019day7.py](year2019day7.py)
 
-My input for this day: [input.txt](year2019/day7/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 7: Amplification Circuit ---
 

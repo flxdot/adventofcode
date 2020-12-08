@@ -1,8 +1,8 @@
 # Advent of Code 2020 - Day 6
 
-Solution for this day: [year2020day6.py](year2020/day6/year2020day6.py)
+Solution for this day: [year2020day6.py](year2020day6.py)
 
-My input for this day: [input.txt](year2020/day6/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 6: Custom Customs ---
 

@@ -1,8 +1,8 @@
 # Advent of Code 2020 - Day 5
 
-Solution for this day: [year2020day5.py](year2020/day5/year2020day5.py)
+Solution for this day: [year2020day5.py](year2020day5.py)
 
-My input for this day: [input.txt](year2020/day5/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 5: Binary Boarding ---
 

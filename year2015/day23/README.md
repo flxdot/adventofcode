@@ -1,8 +1,8 @@
 # Advent of Code 2015 - Day 23
 
-Solution for this day: [year2015day23.py](year2015/day23/year2015day23.py)
+Solution for this day: [year2015day23.py](year2015day23.py)
 
-My input for this day: [input.txt](year2015/day23/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 23: Opening the Turing Lock ---
 

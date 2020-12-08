@@ -1,8 +1,8 @@
 # Advent of Code 2017 - Day 23
 
-Solution for this day: [year2017day23.py](year2017/day23/year2017day23.py)
+Solution for this day: [year2017day23.py](year2017day23.py)
 
-My input for this day: [input.txt](year2017/day23/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 23: Coprocessor Conflagration ---
 

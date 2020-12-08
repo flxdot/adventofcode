@@ -1,8 +1,8 @@
 # Advent of Code 2020 - Day 8
 
-Solution for this day: [year2020day8.py](year2020/day8/year2020day8.py)
+Solution for this day: [year2020day8.py](year2020day8.py)
 
-My input for this day: [input.txt](year2020/day8/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 8: Handheld Halting ---
 

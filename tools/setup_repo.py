@@ -42,9 +42,9 @@ def write_readme_file(year: int, day: int):
 
     read_me = f"""# Advent of Code {year} - Day {day}
 
-Solution for this day: [year{year}day{day}.py](year{year}/day{day}/year{year}day{day}.py)
+Solution for this day: [year{year}day{day}.py](year{year}day{day}.py)
 
-My input for this day: [input.txt](year{year}/day{day}/input.txt)
+My input for this day: [input.txt](input.txt)
 
 {get_task_description(year, day)}
 
@@ -149,7 +149,7 @@ def write_test_input_file(year: int, day: int):
 
 
 if __name__ == "__main__":
-    for year in range(2020, 2021):
+    for year in range(2015, 2020):
 
         year_init_file = os.path.join(f"year{year}", "__init__.py")
         write_file(year_init_file, "")

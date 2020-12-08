@@ -1,8 +1,8 @@
 # Advent of Code 2019 - Day 4
 
-Solution for this day: [year2019day4.py](year2019/day4/year2019day4.py)
+Solution for this day: [year2019day4.py](year2019day4.py)
 
-My input for this day: [input.txt](year2019/day4/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 4: Secure Container ---
 

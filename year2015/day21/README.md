@@ -1,8 +1,8 @@
 # Advent of Code 2015 - Day 21
 
-Solution for this day: [year2015day21.py](year2015/day21/year2015day21.py)
+Solution for this day: [year2015day21.py](year2015day21.py)
 
-My input for this day: [input.txt](year2015/day21/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 21: RPG Simulator 20XX ---
 

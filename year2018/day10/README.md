@@ -1,8 +1,8 @@
 # Advent of Code 2018 - Day 10
 
-Solution for this day: [year2018day10.py](year2018/day10/year2018day10.py)
+Solution for this day: [year2018day10.py](year2018day10.py)
 
-My input for this day: [input.txt](year2018/day10/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 10: The Stars Align ---
 

@@ -1,8 +1,8 @@
 # Advent of Code 2016 - Day 18
 
-Solution for this day: [year2016day18.py](year2016/day18/year2016day18.py)
+Solution for this day: [year2016day18.py](year2016day18.py)
 
-My input for this day: [input.txt](year2016/day18/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 18: Like a Rogue ---
 

@@ -1,8 +1,8 @@
 # Advent of Code 2015 - Day 8
 
-Solution for this day: [year2015day8.py](year2015/day8/year2015day8.py)
+Solution for this day: [year2015day8.py](year2015day8.py)
 
-My input for this day: [input.txt](year2015/day8/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 8: Matchsticks ---
 

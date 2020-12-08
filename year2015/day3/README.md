@@ -1,8 +1,8 @@
 # Advent of Code 2015 - Day 3
 
-Solution for this day: [year2015day3.py](year2015/day3/year2015day3.py)
+Solution for this day: [year2015day3.py](year2015day3.py)
 
-My input for this day: [input.txt](year2015/day3/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 3: Perfectly Spherical Houses in a Vacuum ---
 

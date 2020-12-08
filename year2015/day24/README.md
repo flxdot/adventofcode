@@ -1,8 +1,8 @@
 # Advent of Code 2015 - Day 24
 
-Solution for this day: [year2015day24.py](year2015/day24/year2015day24.py)
+Solution for this day: [year2015day24.py](year2015day24.py)
 
-My input for this day: [input.txt](year2015/day24/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 24: It Hangs in the Balance ---
 

@@ -1,8 +1,8 @@
 # Advent of Code 2016 - Day 22
 
-Solution for this day: [year2016day22.py](year2016/day22/year2016day22.py)
+Solution for this day: [year2016day22.py](year2016day22.py)
 
-My input for this day: [input.txt](year2016/day22/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 22: Grid Computing ---
 

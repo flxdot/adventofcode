@@ -1,8 +1,8 @@
 # Advent of Code 2017 - Day 3
 
-Solution for this day: [year2017day3.py](year2017/day3/year2017day3.py)
+Solution for this day: [year2017day3.py](year2017day3.py)
 
-My input for this day: [input.txt](year2017/day3/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 3: Spiral Memory ---
 

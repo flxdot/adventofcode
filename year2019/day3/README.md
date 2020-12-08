@@ -1,8 +1,8 @@
 # Advent of Code 2019 - Day 3
 
-Solution for this day: [year2019day3.py](year2019/day3/year2019day3.py)
+Solution for this day: [year2019day3.py](year2019day3.py)
 
-My input for this day: [input.txt](year2019/day3/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 3: Crossed Wires ---
 

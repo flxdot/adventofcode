@@ -1,8 +1,8 @@
 # Advent of Code 2015 - Day 14
 
-Solution for this day: [year2015day14.py](year2015/day14/year2015day14.py)
+Solution for this day: [year2015day14.py](year2015day14.py)
 
-My input for this day: [input.txt](year2015/day14/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 14: Reindeer Olympics ---
 

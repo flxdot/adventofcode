@@ -1,8 +1,8 @@
 # Advent of Code 2018 - Day 14
 
-Solution for this day: [year2018day14.py](year2018/day14/year2018day14.py)
+Solution for this day: [year2018day14.py](year2018day14.py)
 
-My input for this day: [input.txt](year2018/day14/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 14: Chocolate Charts ---
 

@@ -1,8 +1,8 @@
 # Advent of Code 2018 - Day 4
 
-Solution for this day: [year2018day4.py](year2018/day4/year2018day4.py)
+Solution for this day: [year2018day4.py](year2018day4.py)
 
-My input for this day: [input.txt](year2018/day4/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 4: Repose Record ---
 

@@ -1,8 +1,8 @@
 # Advent of Code 2019 - Day 10
 
-Solution for this day: [year2019day10.py](year2019/day10/year2019day10.py)
+Solution for this day: [year2019day10.py](year2019day10.py)
 
-My input for this day: [input.txt](year2019/day10/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 10: Monitoring Station ---
 

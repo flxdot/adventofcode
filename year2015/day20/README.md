@@ -1,8 +1,8 @@
 # Advent of Code 2015 - Day 20
 
-Solution for this day: [year2015day20.py](year2015/day20/year2015day20.py)
+Solution for this day: [year2015day20.py](year2015day20.py)
 
-My input for this day: [input.txt](year2015/day20/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 20: Infinite Elves and Infinite Houses ---
 

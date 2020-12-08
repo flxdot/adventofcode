@@ -1,8 +1,8 @@
 # Advent of Code 2019 - Day 2
 
-Solution for this day: [year2019day2.py](year2019/day2/year2019day2.py)
+Solution for this day: [year2019day2.py](year2019day2.py)
 
-My input for this day: [input.txt](year2019/day2/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 2: 1202 Program Alarm ---
 

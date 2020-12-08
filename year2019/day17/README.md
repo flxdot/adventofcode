@@ -1,8 +1,8 @@
 # Advent of Code 2019 - Day 17
 
-Solution for this day: [year2019day17.py](year2019/day17/year2019day17.py)
+Solution for this day: [year2019day17.py](year2019day17.py)
 
-My input for this day: [input.txt](year2019/day17/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 17: Set and Forget ---
 

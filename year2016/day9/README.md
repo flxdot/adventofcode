@@ -1,8 +1,8 @@
 # Advent of Code 2016 - Day 9
 
-Solution for this day: [year2016day9.py](year2016/day9/year2016day9.py)
+Solution for this day: [year2016day9.py](year2016day9.py)
 
-My input for this day: [input.txt](year2016/day9/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 9: Explosives in Cyberspace ---
 

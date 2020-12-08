@@ -1,8 +1,8 @@
 # Advent of Code 2015 - Day 12
 
-Solution for this day: [year2015day12.py](year2015/day12/year2015day12.py)
+Solution for this day: [year2015day12.py](year2015day12.py)
 
-My input for this day: [input.txt](year2015/day12/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 12: JSAbacusFramework.io ---
 

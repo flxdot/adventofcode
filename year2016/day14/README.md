@@ -1,8 +1,8 @@
 # Advent of Code 2016 - Day 14
 
-Solution for this day: [year2016day14.py](year2016/day14/year2016day14.py)
+Solution for this day: [year2016day14.py](year2016day14.py)
 
-My input for this day: [input.txt](year2016/day14/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 14: One-Time Pad ---
 

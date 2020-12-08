@@ -1,8 +1,8 @@
 # Advent of Code 2016 - Day 5
 
-Solution for this day: [year2016day5.py](year2016/day5/year2016day5.py)
+Solution for this day: [year2016day5.py](year2016day5.py)
 
-My input for this day: [input.txt](year2016/day5/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 5: How About a Nice Game of Chess? ---
 

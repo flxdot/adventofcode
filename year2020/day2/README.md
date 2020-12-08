@@ -1,8 +1,8 @@
 # Advent of Code 2020 - Day 2
 
-Solution for this day: [year2020day2.py](year2020/day2/year2020day2.py)
+Solution for this day: [year2020day2.py](year2020day2.py)
 
-My input for this day: [input.txt](year2020/day2/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 2: Password Philosophy ---
 

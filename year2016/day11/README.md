@@ -1,8 +1,8 @@
 # Advent of Code 2016 - Day 11
 
-Solution for this day: [year2016day11.py](year2016/day11/year2016day11.py)
+Solution for this day: [year2016day11.py](year2016day11.py)
 
-My input for this day: [input.txt](year2016/day11/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 11: Radioisotope Thermoelectric Generators ---
 

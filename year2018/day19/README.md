@@ -1,8 +1,8 @@
 # Advent of Code 2018 - Day 19
 
-Solution for this day: [year2018day19.py](year2018/day19/year2018day19.py)
+Solution for this day: [year2018day19.py](year2018day19.py)
 
-My input for this day: [input.txt](year2018/day19/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 19: Go With The Flow ---
 

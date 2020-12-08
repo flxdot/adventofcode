@@ -1,8 +1,8 @@
 # Advent of Code 2017 - Day 18
 
-Solution for this day: [year2017day18.py](year2017/day18/year2017day18.py)
+Solution for this day: [year2017day18.py](year2017day18.py)
 
-My input for this day: [input.txt](year2017/day18/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 18: Duet ---
 

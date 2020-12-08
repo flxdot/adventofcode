@@ -1,8 +1,8 @@
 # Advent of Code 2016 - Day 15
 
-Solution for this day: [year2016day15.py](year2016/day15/year2016day15.py)
+Solution for this day: [year2016day15.py](year2016day15.py)
 
-My input for this day: [input.txt](year2016/day15/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 15: Timing is Everything ---
 

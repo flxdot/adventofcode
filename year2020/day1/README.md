@@ -1,8 +1,8 @@
 # Advent of Code 2020 - Day 1
 
-Solution for this day: [year2020day1.py](year2020/day1/year2020day1.py)
+Solution for this day: [year2020day1.py](year2020day1.py)
 
-My input for this day: [input.txt](year2020/day1/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 1: Report Repair ---
 

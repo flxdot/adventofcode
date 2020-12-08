@@ -1,8 +1,8 @@
 # Advent of Code 2018 - Day 15
 
-Solution for this day: [year2018day15.py](year2018/day15/year2018day15.py)
+Solution for this day: [year2018day15.py](year2018day15.py)
 
-My input for this day: [input.txt](year2018/day15/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 15: Beverage Bandits ---
 

@@ -1,8 +1,8 @@
 # Advent of Code 2019 - Day 24
 
-Solution for this day: [year2019day24.py](year2019/day24/year2019day24.py)
+Solution for this day: [year2019day24.py](year2019day24.py)
 
-My input for this day: [input.txt](year2019/day24/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 24: Planet of Discord ---
 

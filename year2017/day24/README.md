@@ -1,8 +1,8 @@
 # Advent of Code 2017 - Day 24
 
-Solution for this day: [year2017day24.py](year2017/day24/year2017day24.py)
+Solution for this day: [year2017day24.py](year2017day24.py)
 
-My input for this day: [input.txt](year2017/day24/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 24: Electromagnetic Moat ---
 

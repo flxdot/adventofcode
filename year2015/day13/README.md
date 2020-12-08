@@ -1,8 +1,8 @@
 # Advent of Code 2015 - Day 13
 
-Solution for this day: [year2015day13.py](year2015/day13/year2015day13.py)
+Solution for this day: [year2015day13.py](year2015day13.py)
 
-My input for this day: [input.txt](year2015/day13/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 13: Knights of the Dinner Table ---
 

@@ -1,8 +1,8 @@
 # Advent of Code 2015 - Day 1
 
-Solution for this day: [year2015day1.py](year2015/day1/year2015day1.py)
+Solution for this day: [year2015day1.py](year2015day1.py)
 
-My input for this day: [input.txt](year2015/day1/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 1: Not Quite Lisp ---
 

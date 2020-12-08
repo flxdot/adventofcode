@@ -1,8 +1,8 @@
 # Advent of Code 2016 - Day 10
 
-Solution for this day: [year2016day10.py](year2016/day10/year2016day10.py)
+Solution for this day: [year2016day10.py](year2016day10.py)
 
-My input for this day: [input.txt](year2016/day10/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 10: Balance Bots ---
 

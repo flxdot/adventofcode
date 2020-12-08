@@ -1,8 +1,8 @@
 # Advent of Code 2018 - Day 1
 
-Solution for this day: [year2018day1.py](year2018/day1/year2018day1.py)
+Solution for this day: [year2018day1.py](year2018day1.py)
 
-My input for this day: [input.txt](year2018/day1/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 1: Chronal Calibration ---
 

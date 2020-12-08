@@ -1,8 +1,8 @@
 # Advent of Code 2017 - Day 15
 
-Solution for this day: [year2017day15.py](year2017/day15/year2017day15.py)
+Solution for this day: [year2017day15.py](year2017day15.py)
 
-My input for this day: [input.txt](year2017/day15/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 15: Dueling Generators ---
 

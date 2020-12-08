@@ -1,8 +1,8 @@
 # Advent of Code 2019 - Day 6
 
-Solution for this day: [year2019day6.py](year2019/day6/year2019day6.py)
+Solution for this day: [year2019day6.py](year2019day6.py)
 
-My input for this day: [input.txt](year2019/day6/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 6: Universal Orbit Map ---
 

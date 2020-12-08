@@ -1,8 +1,8 @@
 # Advent of Code 2016 - Day 12
 
-Solution for this day: [year2016day12.py](year2016/day12/year2016day12.py)
+Solution for this day: [year2016day12.py](year2016day12.py)
 
-My input for this day: [input.txt](year2016/day12/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 12: Leonardo's Monorail ---
 

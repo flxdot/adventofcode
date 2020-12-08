@@ -1,8 +1,8 @@
 # Advent of Code 2017 - Day 10
 
-Solution for this day: [year2017day10.py](year2017/day10/year2017day10.py)
+Solution for this day: [year2017day10.py](year2017day10.py)
 
-My input for this day: [input.txt](year2017/day10/input.txt)
+My input for this day: [input.txt](input.txt)
 
 ## \--- Day 10: Knot Hash ---
 
