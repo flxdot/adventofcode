@@ -62,6 +62,50 @@ accumulator is 5.
 
 Run your copy of the boot code. Immediately before any instruction is executed a second
 time, what value is in the accumulator?
+
+--- Part Two ---
+
+After some careful analysis, you believe that exactly one instruction is corrupted.
+
+Somewhere in the program, either a jmp is supposed to be a nop, or a nop is supposed to
+be a jmp. (No acc instructions were harmed in the corruption of this boot code.)
+
+The program is supposed to terminate by attempting to execute an instruction immediately
+after the last instruction in the file. By changing exactly one jmp or nop, you can repair
+the boot code and make it terminate correctly.
+
+For example, consider the same program from above:
+
+nop +0
+acc +1
+jmp +4
+acc +3
+jmp -3
+acc -99
+acc +1
+jmp -4
+acc +6
+
+If you change the first instruction from nop +0 to jmp +0, it would create a single-instruction
+infinite loop, never leaving that instruction. If you change almost any of the jmp instructions,
+the program will still eventually find another jmp instruction and loop forever.
+
+However, if you change the second-to-last instruction (from jmp -4 to nop -4), the program
+terminates! The instructions are visited in this order:
+
+nop +0  | 1
+acc +1  | 2
+jmp +4  | 3
+acc +3  |
+jmp -3  |
+acc -99 |
+acc +1  | 4
+nop -4  | 5
+acc +6  | 6
+
+After the last instruction (acc +6), the program terminates by attempting to run the instruction below the last instruction in the file. With this change, after the program terminates, the accumulator contains the value 8 (acc +1, acc +1, acc +6).
+
+Fix the program so that it terminates normally by changing exactly one jmp (to nop) or nop (to jmp). What is the value of the accumulator after the program terminates?
 """
 
 from typing import List, Tuple
@@ -72,7 +116,6 @@ convert_output = Tuple[str, int]
 
 
 class CommandExecutor:
-
     def __init__(self, commands: List[convert_output]):
 
         self._commands = commands
@@ -81,14 +124,27 @@ class CommandExecutor:
         self._lines_visited = []
         self._current_line = 0
 
+        self._did_finish_regular = None
+
+    @property
+    def accumulator(self):
+        return self._accumulator
+
+    @property
+    def did_finish_regular(self):
+        return self._did_finish_regular
+
     def execute(self):
 
         self.reset()
 
-        while self._current_line not in self._lines_visited:
+        while (
+            self._current_line not in self._lines_visited
+            and self._current_line < len(self._commands)
+        ):
             self._execute_line(self._commands[self._current_line])
 
-        return self._accumulator
+        self._did_finish_regular = self._current_line >= len(self._commands)
 
     def reset(self):
         self._accumulator = 0
@@ -100,7 +156,7 @@ class CommandExecutor:
         command_to_fcn = {
             "nop": self._no_operation,
             "acc": self._accumulate,
-            "jmp": self._jump
+            "jmp": self._jump,
         }
 
         self._lines_visited.append(self._current_line)
@@ -127,11 +183,30 @@ def input_converter(input_line: str) -> convert_output:
 def solve_day8_part1(converted_input: List[convert_output]):
 
     command_executor = CommandExecutor(converted_input)
-    return command_executor.execute()
+    command_executor.execute()
+    return command_executor.accumulator
 
 
 def solve_day8_part2(converted_input: List[convert_output]):
-    pass
+
+    for idx, instruction in enumerate(converted_input):
+        command, value = instruction
+        if command == "acc":
+            continue
+
+        boot_code_variant = converted_input[:]
+        boot_code_variant[idx] = (
+            "jmp" if command == "nop" else "nop",
+            boot_code_variant[idx][1],
+        )
+
+        command_executor = CommandExecutor(boot_code_variant)
+        command_executor.execute()
+
+        if command_executor.did_finish_regular:
+            return command_executor.accumulator
+
+    raise RuntimeError("No bug fix found!")
 
 
 if __name__ == "__main__":
