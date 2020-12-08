@@ -3,9 +3,12 @@ This module contains some code to scrape the adventofcode.com website for inputs
 """
 import os
 
-from bs4 import BeautifulSoup
+import html2text
+from bs4 import BeautifulSoup, Tag, NavigableString
 from urllib.request import urlopen
 import requests
+
+from markdownify import markdownify as md
 
 
 def get_task_url(year: int, day: int) -> str:
@@ -17,11 +20,10 @@ def get_task_description(year: int, day: int) -> str:
     """Fetches the description of the task for the specified year and day."""
 
     url = get_task_url(year, day)
-    page = urlopen(url)
-    html = page.read().decode("utf-8")
-    page = BeautifulSoup(html, "html.parser")
+    response = requests.get(url, cookies={"session": read_cookie()})
+    page = BeautifulSoup(response.text, "html.parser")
     description = page.find_all("article", class_="day-desc")[0]
-    return description.get_text()
+    return html2text.HTML2Text().handle(str(description))
 
 
 def get_task_input(year: int, day: int) -> str:
@@ -36,8 +38,9 @@ def get_task_input(year: int, day: int) -> str:
 
 def read_cookie():
 
-    with open("../aoc_session.cookie", "r") as r:
+    with open("./aoc_session.cookie", "r") as r:
         return r.read()
 
+
 if __name__ == "__main__":
-    print(get_task_input(2015, 23))
+    print(get_task_description(2020, 3))

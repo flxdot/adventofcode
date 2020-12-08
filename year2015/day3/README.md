@@ -1,0 +1,29 @@
+# Advent of Code 2015 - Day 3
+
+Solution for this day: [year2015day3.py](year2015/day3/year2015day3.py)
+
+My input for this day: [input.txt](year2015/day3/input.txt)
+
+## \--- Day 3: Perfectly Spherical Houses in a Vacuum ---
+
+Santa is delivering presents to an infinite two-dimensional grid of houses.
+
+He begins by delivering a present to the house at his starting location, and
+then an elf at the North Pole calls him via radio and tells him where to move
+next. Moves are always exactly one house to the north (`^`), south (`v`), east
+(`>`), or west (`<`). After each move, he delivers another present to the
+house at his new location.
+
+However, the elf back at the north pole has had a little too much eggnog, and
+so his directions are a little off, and Santa ends up visiting some houses
+more than once. How many houses receive _at least one present_?
+
+For example:
+
+  * `>` delivers presents to `2` houses: one at the starting location, and one to the east.
+  * `^>v<` delivers presents to `4` houses in a square, including twice to the house at his starting/ending location.
+  * `^v^v^v^v^v` delivers a bunch of presents to some very lucky children at only `2` houses.
+
+
+
+Source: [https://adventofcode.com/2015/day/3](https://adventofcode.com/2015/day/3)
