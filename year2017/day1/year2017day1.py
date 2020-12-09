@@ -26,7 +26,19 @@ def solve_part1(converted_input: List[convert_output]):
 
 
 def solve_part2(converted_input: List[convert_output]):
-    return 1
+    return calculate_captcha2(converted_input[0])
+
+
+def calculate_captcha2(digit_sequence: List[int]) -> int:
+
+    seq_len = len(digit_sequence)
+    match_offset = seq_len / 2
+    captcha_sum = 0
+    for idx, num in enumerate(digit_sequence):
+        match_idx = int((idx + match_offset) % seq_len)
+        if num == digit_sequence[match_idx]:
+            captcha_sum += num
+    return captcha_sum
 
 
 if __name__ == "__main__":
