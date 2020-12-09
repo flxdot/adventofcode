@@ -1,21 +1,32 @@
+import math
 from os.path import join, relpath, dirname
 from typing import List
 from common import read_input
 
 
-convert_output = str
+convert_output = input_converter = int
 
 
-def input_converter(input_line: str) -> convert_output:
-    return str(input_line)
+def calculate_fuel_for_mass(mass: int) -> int:
+    return math.floor(mass / 3) - 2
+
+
+def calculate_total_module_fuel(mass: int) -> int:
+
+    module_fuel = calculate_fuel_for_mass(mass)
+    fuel_fuel = calculate_fuel_for_mass(module_fuel)
+    while fuel_fuel > 0:
+        module_fuel += fuel_fuel
+        fuel_fuel = calculate_fuel_for_mass(fuel_fuel)
+    return module_fuel
 
 
 def solve_part1(converted_input: List[convert_output]):
-    return 1
+    return sum([calculate_fuel_for_mass(mass) for mass in converted_input])
 
 
 def solve_part2(converted_input: List[convert_output]):
-    return 1
+    return sum([calculate_total_module_fuel(mass) for mass in converted_input])
 
 
 if __name__ == "__main__":

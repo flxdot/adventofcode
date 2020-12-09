@@ -38,7 +38,7 @@ Here are the links to the individual implementations of each day:
 
 ### 2019
 
-- [ ] [Day 1](year2019/day1/)
+- [x] [Day 1](year2019/day1/)
 - [ ] [Day 2](year2019/day2/)
 - [ ] [Day 3](year2019/day3/)
 - [ ] [Day 4](year2019/day4/)
@@ -65,7 +65,7 @@ Here are the links to the individual implementations of each day:
 
 ### 2018
 
-- [ ] [Day 1](year2018/day1/)
+- [x] [Day 1](year2018/day1/)
 - [ ] [Day 2](year2018/day2/)
 - [ ] [Day 3](year2018/day3/)
 - [ ] [Day 4](year2018/day4/)
