@@ -19,7 +19,7 @@ Here are the links to the individual implementations of each day:
 - [x] [Day 6](year2020/day6/)
 - [x] [Day 7](year2020/day7/)
 - [x] [Day 8](year2020/day8/)
-- [ ] [Day 9](year2020/day9/)
+- [x] [Day 9](year2020/day9/)
 - [ ] [Day 10](year2020/day10/)
 - [ ] [Day 11](year2020/day11/)
 - [ ] [Day 12](year2020/day12/)
@@ -119,7 +119,7 @@ Here are the links to the individual implementations of each day:
 
 ### 2016
 
-- [ ] [Day 1](year2016/day1/)
+- [ ] [Day 1](year2016/day1/) - Test working but result is wrong?!
 - [ ] [Day 2](year2016/day2/)
 - [ ] [Day 3](year2016/day3/)
 - [ ] [Day 4](year2016/day4/)
