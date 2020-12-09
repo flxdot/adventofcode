@@ -130,7 +130,9 @@ def solve_day6_part2(groups_yes_answers: List[List[str]]) -> int:
 
 
 if __name__ == "__main__":
-    groups_yes_answers = read_input_groups(join(relpath(dirname(__file__)), "input.txt"), str)
+    groups_yes_answers = read_input_groups(
+        join(relpath(dirname(__file__)), "input.txt"), str
+    )
 
     print(f"Solution of Day 6 - Part 1 is " f"'{solve_day6_part1(groups_yes_answers)}'")
     print(f"Solution of Day 6 - Part 2 is " f"'{solve_day6_part2(groups_yes_answers)}'")

@@ -227,7 +227,9 @@ def solve_day8_part2(boot_code: List[instruction_type]):
 
 
 if __name__ == "__main__":
-    boot_code = read_input(join(relpath(dirname(__file__)), "input.txt"), input_converter)
+    boot_code = read_input(
+        join(relpath(dirname(__file__)), "input.txt"), input_converter
+    )
 
     print(f"Solution of Day 1 - Part 1 is '{solve_day8_part1(boot_code)}'")
     print(f"Solution of Day 1 - Part 2 is '{solve_day8_part2(boot_code)}'")

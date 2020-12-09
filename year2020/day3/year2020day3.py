@@ -120,7 +120,9 @@ def count_on_slope(tree_map: List[List[bool]], slope: Tuple[int, int]) -> int:
 
 if __name__ == "__main__":
 
-    input_data = read_input(join(relpath(dirname(__file__)), "input.txt"), convert_tree_map)
+    input_data = read_input(
+        join(relpath(dirname(__file__)), "input.txt"), convert_tree_map
+    )
 
     # first entry steps down, second entry steps to the right
     slope = (1, 3)

@@ -6,10 +6,14 @@ from year2016.day8.year2016day8 import solve_part1, solve_part2, input_converter
 
 
 def test_solve_part1():
-    test_input = read_input(join(relpath(dirname(__file__)), "test_input.txt"), input_converter)
+    test_input = read_input(
+        join(relpath(dirname(__file__)), "test_input.txt"), input_converter
+    )
     assert 1 == solve_part1(test_input)
 
 
 def test_solve_part2():
-    test_input = read_input(join(relpath(dirname(__file__)), "test_input.txt"), input_converter)
+    test_input = read_input(
+        join(relpath(dirname(__file__)), "test_input.txt"), input_converter
+    )
     assert 1 == solve_part2(test_input)

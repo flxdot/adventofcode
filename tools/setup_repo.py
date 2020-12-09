@@ -64,7 +64,7 @@ def write_solution_file(year: int, day: int):
 
     with open(os.path.join(path, file_name), "w") as writer:
         writer.write(
-            f'''from os.path import join, relpath, dirname
+            f"""from os.path import join, relpath, dirname
 from typing import List
 from common import read_input
 
@@ -90,7 +90,7 @@ if __name__ == "__main__":
     print(f"Solution of {year}/{day} - Part 1 is '{{solve_part1(raw_input)}}'")
     print(f"Solution of {year}/{day} - Part 2 is '{{solve_part2(raw_input)}}'")
 
-'''
+"""
         )
 
 

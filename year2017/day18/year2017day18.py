@@ -19,8 +19,9 @@ def solve_part2(converted_input: List[convert_output]):
 
 
 if __name__ == "__main__":
-    raw_input = read_input(join(relpath(dirname(__file__)), "input.txt"), input_converter)
+    raw_input = read_input(
+        join(relpath(dirname(__file__)), "input.txt"), input_converter
+    )
 
     print(f"Solution of 2017/18 - Part 1 is '{solve_part1(raw_input)}'")
     print(f"Solution of 2017/18 - Part 2 is '{solve_part2(raw_input)}'")
-

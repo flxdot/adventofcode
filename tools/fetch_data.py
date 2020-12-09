@@ -39,7 +39,11 @@ def get_task_input(year: int, day: int) -> str:
 
 def read_cookie():
 
-    with open("./aoc_session.cookie", "r") as r:
+    cookie_file = os.path.abspath(
+        os.path.join(os.path.dirname(__file__), "..", "aoc_session.cookie")
+    )
+
+    with open(cookie_file, "r") as r:
         return r.read()
 
 

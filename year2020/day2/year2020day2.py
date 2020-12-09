@@ -121,7 +121,9 @@ def solve_day2(
 
 
 if __name__ == "__main__":
-    converted_inputs = read_input(join(relpath(dirname(__file__)), "input.txt"), convert_line_of_input)
+    converted_inputs = read_input(
+        join(relpath(dirname(__file__)), "input.txt"), convert_line_of_input
+    )
 
     print(
         f"Solution of Day 2 - Part 1 is "

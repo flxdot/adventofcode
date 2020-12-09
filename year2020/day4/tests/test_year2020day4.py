@@ -11,8 +11,12 @@ def test_solve_part1():
 
 
 def test_solve_part2():
-    valid_input = read_input(join(relpath(dirname(__file__)), "test_input_part2_valid.txt"), str)
+    valid_input = read_input(
+        join(relpath(dirname(__file__)), "test_input_part2_valid.txt"), str
+    )
     assert solve_day4_part2(valid_input) == 4
 
-    invalid_input = read_input(join(relpath(dirname(__file__)), "test_input_part2_invalid.txt"), str)
+    invalid_input = read_input(
+        join(relpath(dirname(__file__)), "test_input_part2_invalid.txt"), str
+    )
     assert solve_day4_part2(invalid_input) == 0

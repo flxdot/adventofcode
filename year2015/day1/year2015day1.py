@@ -23,8 +23,9 @@ def solve_part2(converted_input: convert_output):
 
 
 if __name__ == "__main__":
-    raw_input = read_input(join(relpath(dirname(__file__)), "input.txt"), input_converter)
+    raw_input = read_input(
+        join(relpath(dirname(__file__)), "input.txt"), input_converter
+    )
 
     print(f"Solution of 2015/1 - Part 1 is '{solve_part1(raw_input[0])}'")
     print(f"Solution of 2015/1 - Part 2 is '{solve_part2(raw_input[0])}'")
-

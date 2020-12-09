@@ -98,7 +98,9 @@ class Seat:
 
 if __name__ == "__main__":
 
-    seats = read_input(join(relpath(dirname(__file__)), "input.txt"), Seat.from_specifier)
+    seats = read_input(
+        join(relpath(dirname(__file__)), "input.txt"), Seat.from_specifier
+    )
     seat_ids = [seat.id for seat in seats]
 
     # part one

@@ -15,11 +15,7 @@ def calculate_wrapping_paper_surface(dimensions: convert_output) -> int:
 
     l, w, h = dimensions
 
-    side_areas = [
-        2 * l * w,
-        2 * w * h,
-        2 * h * l
-    ]
+    side_areas = [2 * l * w, 2 * w * h, 2 * h * l]
 
     slack = min(side_areas) / 2
 
@@ -29,7 +25,7 @@ def calculate_wrapping_paper_surface(dimensions: convert_output) -> int:
 def calculate_ribbon_length(dimensions: convert_output) -> int:
     l, w, h = dimensions
 
-    bow_length = l*w*h
+    bow_length = l * w * h
 
     ribbon_length = sum(sorted(dimensions)[0:2]) * 2
 
@@ -45,8 +41,9 @@ def solve_part2(converted_input: List[convert_output]):
 
 
 if __name__ == "__main__":
-    raw_input = read_input(join(relpath(dirname(__file__)), "input.txt"), input_converter)
+    raw_input = read_input(
+        join(relpath(dirname(__file__)), "input.txt"), input_converter
+    )
 
     print(f"Solution of 2015/2 - Part 1 is '{solve_part1(raw_input)}'")
     print(f"Solution of 2015/2 - Part 2 is '{solve_part2(raw_input)}'")
-

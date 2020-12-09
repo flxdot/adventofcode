@@ -169,7 +169,9 @@ def solve_day7_part2(converted_input: List[Bag]):
 
 
 if __name__ == "__main__":
-    raw_input = read_input(join(relpath(dirname(__file__)), "input.txt"), input_converter)
+    raw_input = read_input(
+        join(relpath(dirname(__file__)), "input.txt"), input_converter
+    )
 
     print(f"Solution of Day 1 - Part 1 is '{solve_day7_part1(raw_input)}'")
     print(f"Solution of Day 1 - Part 2 is '{solve_day7_part2(raw_input)}'")

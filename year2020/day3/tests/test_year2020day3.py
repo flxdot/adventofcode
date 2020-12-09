@@ -7,7 +7,9 @@ from year2020.day3.year2020day3 import convert_tree_map, count_on_slope
 
 @pytest.fixture(scope="module")
 def test_input():
-    return read_input(join(relpath(dirname(__file__)), "test_input.txt"), convert_tree_map)
+    return read_input(
+        join(relpath(dirname(__file__)), "test_input.txt"), convert_tree_map
+    )
 
 
 def test_solve_day3(test_input):
