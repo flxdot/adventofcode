@@ -3,19 +3,23 @@ from typing import List
 from common import read_input
 
 
-convert_output = str
-
-
-def input_converter(input_line: str) -> convert_output:
-    return str(input_line)
+input_converter = convert_output = int
 
 
 def solve_part1(converted_input: List[convert_output]):
-    return 1
+    return sum(converted_input)
 
 
 def solve_part2(converted_input: List[convert_output]):
-    return 1
+
+    frequency = 0
+    calculated_frequencies = {}
+    idx = 0
+    while frequency not in calculated_frequencies:
+        calculated_frequencies[frequency] = frequency
+        frequency += converted_input[idx]
+        idx = (idx + 1) % len(converted_input)
+    return frequency
 
 
 if __name__ == "__main__":
