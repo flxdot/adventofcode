@@ -19,6 +19,22 @@ class XmasEncryptionExploit:
             if self._data_package_is_weak(value, checksum):
                 return value
 
+    def get_weakness(self, full_data: List[int]) -> List[int]:
+        """Returns sequence of numbers of weakness."""
+
+        exploit_value = self.exploit(full_data)
+
+        data_len = len(full_data)
+        for start_index in range(data_len):
+            for end_index in range(start_index, data_len):
+                cur_data = full_data[start_index:end_index]
+                range_sum = sum(cur_data)
+                if range_sum == exploit_value:
+                    return cur_data
+                if range_sum > exploit_value:
+                    break
+        raise ValueError("No exploit found")
+
     @staticmethod
     def _data_package_is_weak(value: int, checksum: List[int]) -> bool:
 
@@ -59,7 +75,8 @@ def input_converter(input_line: str) -> convert_output:
 
 
 def solve_part1(converted_input: List[convert_output]):
-    return get_first_xmax_weakness(converted_input)
+    weakness_values = get_first_xmax_weakness(converted_input)
+    return
 
 
 def get_first_xmax_weakness(
@@ -71,14 +88,20 @@ def get_first_xmax_weakness(
     return XmasEncryptionExploit(preamble_length).exploit(encrypted_data)
 
 
-def increment_slice(index: slice, increment: int = 1) -> slice:
-    """Increments the start and stop of a slice by the specified increment."""
+def get_encrypted_xmas_weakness(
+    encrypted_data: List[convert_output], preamble_length: int = 25
+) -> int:
+    """Returns the index of the first non matching checksum value of the given xmax
+    encrypted data"""
 
-    return slice(index.start + increment, index.stop + increment)
+    weakness_values = XmasEncryptionExploit(preamble_length).get_weakness(
+        encrypted_data
+    )
+    return min(weakness_values) + max(weakness_values)
 
 
 def solve_part2(converted_input: List[convert_output]):
-    return 1
+    return get_encrypted_xmas_weakness(converted_input)
 
 
 if __name__ == "__main__":

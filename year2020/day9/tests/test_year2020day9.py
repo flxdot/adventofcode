@@ -3,9 +3,9 @@ import pytest
 
 from common import read_input
 from year2020.day9.year2020day9 import (
-    solve_part2,
     input_converter,
     get_first_xmax_weakness,
+    get_encrypted_xmas_weakness,
 )
 
 
@@ -20,4 +20,4 @@ def test_solve_part2():
     test_input = read_input(
         join(relpath(dirname(__file__)), "test_input.txt"), input_converter
     )
-    assert 1 == solve_part2(test_input)
+    assert 62 == get_encrypted_xmas_weakness(test_input, 5)
