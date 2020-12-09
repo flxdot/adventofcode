@@ -92,8 +92,7 @@ Here are the links to the individual implementations of each day:
 
 ### 2017
 
-- [ ] [Day 1](year2017/day1/) - can't finish part 2 as the input does not comply with 
-  description
+- [x] [Day 1](year2017/day1/)
 - [ ] [Day 2](year2017/day2/)
 - [ ] [Day 3](year2017/day3/)
 - [ ] [Day 4](year2017/day4/)

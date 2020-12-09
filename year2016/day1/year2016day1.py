@@ -6,12 +6,12 @@ from common import read_input
 
 convert_output = List[str]
 
-class GridWalker:
 
+class GridWalker:
     def __init__(self):
 
         self._current_pos = [0, 0]
-        self._heading = math.pi/2
+        self._heading = math.pi / 2
 
     @property
     def position(self):
@@ -22,7 +22,9 @@ class GridWalker:
         return int(abs(self._current_pos[0]) + abs(self._current_pos[1]))
 
     def __repr__(self):
-        return f"Self @ {self.position[0]},{self.position[1]} - {self.distance_from_home}"
+        return (
+            f"Self @ {self.position[0]},{self.position[1]} - {self.distance_from_home}"
+        )
 
     def walk(self, direction: str):
 
@@ -37,10 +39,7 @@ class GridWalker:
     def _convert_direction(direction: str) -> Tuple[float, int]:
         """Converts a direction into a heading and distance."""
 
-        direction_to_heading = {
-            "L": math.pi/2,
-            "R": -math.pi/2
-        }
+        direction_to_heading = {"L": math.pi / 2, "R": -math.pi / 2}
 
         return direction_to_heading[direction[0]], int(direction[1])
 

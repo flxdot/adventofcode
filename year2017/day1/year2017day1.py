@@ -11,10 +11,10 @@ def input_converter(input_line: str) -> convert_output:
 
 
 def calculate_captcha(digit_sequence: List[int]) -> int:
-    digit_sequence.append(digit_sequence[0])
-    prev_num = digit_sequence[0]
+    wrapped_sequence = digit_sequence[:] + [digit_sequence[0]]
+    prev_num = wrapped_sequence[0]
     captcha_sum = 0
-    for num in digit_sequence[1:]:
+    for num in wrapped_sequence[1:]:
         if num == prev_num:
             captcha_sum += num
         prev_num = num
