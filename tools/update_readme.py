@@ -17,4 +17,3 @@ if __name__ == "__main__":
 
     # write_readme_file(2017, 1)
     update_all_readme()
-

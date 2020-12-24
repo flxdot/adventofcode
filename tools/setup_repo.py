@@ -113,12 +113,12 @@ from year{year}.{name}.year{year}day{day} import solve_part1, solve_part2, input
 
 def test_solve_part1():
     test_input = read_input(join(relpath(dirname(__file__)), "test_input.txt"), input_converter)
-    assert 1 == solve_part1(test_input)
+    assert solve_part1(test_input) == 1
 
 
 def test_solve_part2():
     test_input = read_input(join(relpath(dirname(__file__)), "test_input.txt"), input_converter)
-    assert 1 == solve_part2(test_input)
+    assert solve_part2(test_input) == 1
 """
         )
 
