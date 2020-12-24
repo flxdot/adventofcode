@@ -149,10 +149,10 @@ def write_test_input_file(year: int, day: int):
 
 
 if __name__ == "__main__":
-    for year in range(2015, 2020):
+    for year in range(2015, 2021):
 
         year_init_file = os.path.join(f"year{year}", "__init__.py")
         write_file(year_init_file, "")
 
-        for day in range(1, 25):
+        for day in range(25, 26):
             write_day(year, day)

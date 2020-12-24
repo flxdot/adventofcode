@@ -34,7 +34,8 @@ Here are the links to the individual implementations of each day:
 - [ ] [Day 21](year2020/day21/)
 - [ ] [Day 22](year2020/day22/)
 - [ ] [Day 23](year2020/day23/)
-- [ ] [Day 24](year2020/day24/)
+- [x] [Day 24](year2020/day24/)
+- [ ] [Day 25](year2020/day25/)
 
 ### 2019
 
@@ -62,6 +63,7 @@ Here are the links to the individual implementations of each day:
 - [ ] [Day 22](year2019/day22/)
 - [ ] [Day 23](year2019/day23/)
 - [ ] [Day 24](year2019/day24/)
+- [ ] [Day 25](year2019/day25/)
 
 ### 2018
 
@@ -89,6 +91,7 @@ Here are the links to the individual implementations of each day:
 - [ ] [Day 22](year2018/day22/)
 - [ ] [Day 23](year2018/day23/)
 - [ ] [Day 24](year2018/day24/)
+- [ ] [Day 25](year2018/day25/)
 
 ### 2017
 
@@ -116,6 +119,7 @@ Here are the links to the individual implementations of each day:
 - [ ] [Day 22](year2017/day22/)
 - [ ] [Day 23](year2017/day23/)
 - [ ] [Day 24](year2017/day24/)
+- [ ] [Day 25](year2017/day25/)
 
 ### 2016
 
@@ -143,6 +147,7 @@ Here are the links to the individual implementations of each day:
 - [ ] [Day 22](year2016/day22/)
 - [ ] [Day 23](year2016/day23/)
 - [ ] [Day 24](year2016/day24/)
+- [ ] [Day 25](year2016/day25/)
 
 ### 2015
 
@@ -170,6 +175,7 @@ Here are the links to the individual implementations of each day:
 - [ ] [Day 22](year2015/day22/)
 - [ ] [Day 23](year2015/day23/)
 - [ ] [Day 24](year2015/day24/)
+- [ ] [Day 25](year2015/day25/)
 
 ## Notes
 
