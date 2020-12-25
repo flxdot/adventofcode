@@ -9,7 +9,7 @@ def test_solve_part1():
     test_input = read_input(
         join(relpath(dirname(__file__)), "test_input.txt"), input_converter
     )
-    assert 1 == solve_part1(test_input)
+    assert 220 == solve_part1(test_input)
 
 
 def test_solve_part2():
