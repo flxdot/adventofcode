@@ -62,10 +62,9 @@ def forward(distance: int) -> Callable[[Tuple[int, int, int]], Tuple[int, int, i
     def execute_forward(start_pos: Tuple[int, int, int]):
         nonlocal distance
         phi = start_pos[2] / 180 * math.pi
-        x = math.cos(phi) * distance
-        y = math.sin(phi) * distance
+        x = round(math.cos(phi) * distance)
+        y = round(math.sin(phi) * distance)
         return start_pos[0] + x, start_pos[1] + y, start_pos[2]
-
     return execute_forward
 
 
